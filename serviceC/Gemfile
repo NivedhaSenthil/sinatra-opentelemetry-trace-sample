@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+
+gem "sinatra"
+gem "opentelemetry-sdk"
+gem "opentelemetry-exporter-google_cloud_trace"
+gem "opentelemetry-instrumentation-all"
+gem "webrick"
