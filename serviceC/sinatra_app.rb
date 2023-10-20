@@ -1,7 +1,6 @@
 require "sinatra"
 require "opentelemetry-sdk"
-require "opentelemetry/instrumentation/sinatra"
-require "opentelemetry/instrumentation/rack"
+require "opentelemetry/instrumentation/all"
 require "opentelemetry/exporter/google_cloud_trace"
 require 'net/http'
 
@@ -39,6 +38,5 @@ get "/message" do
     puts res.body
     span.add_event "Pulled!!"
   end
-  sleep 20
   "Hello !"
 end
